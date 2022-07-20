@@ -10,13 +10,18 @@ console.log('Il prezzo del biglietto - senza l\'applicazione di eventuali sconti
 
 //condizioni 
 let prezzoFinale;
-if ((etaPasseggero >= 18) && (etaPasseggero < 65)) {
-    prezzoFinale = prezzoBiglietto;
-} else if (etaPasseggero < 18) {
-    prezzoFinale = prezzoBiglietto * 0.8;
+if (!isNaN(etaPasseggero) && !isNaN(kmDaPercorrere)){
+    if ((etaPasseggero >= 18) && (etaPasseggero < 65)) {
+        prezzoFinale = prezzoBiglietto;
+        } else if (etaPasseggero < 18) {
+            prezzoFinale = prezzoBiglietto * 0.8;
+        } else {
+            prezzoFinale = prezzoBiglietto * 0.6;
+        }
+
+    //output finale
+    document.getElementById('messaggio').innerHTML = 'Il prezzo del biglietto è il seguente: ' + prezzoFinale.toFixed(2) + ' Є';
 } else {
-    prezzoFinale = prezzoBiglietto * 0.6;
+    document.getElementById('messaggio').innerHTML = 'Attenzione: Sono stati inseriti dei valori non corretti. Per favore, aggiornare la pagina e ripetere la procedura';
 }
 
-//output finale
-document.getElementById('messaggio').innerHTML = 'Il prezzo del biglietto è il seguente: ' + prezzoFinale.toFixed(2) + ' Є';
