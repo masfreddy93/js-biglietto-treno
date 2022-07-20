@@ -1,6 +1,6 @@
 //dichiarazione e assegnazione variabili km ed età 
-const kmDaPercorrere = parseInt(prompt('Inserisci il numero di km che vuoi percorrere, per favore'));
-const etaPasseggero = parseInt(prompt('Inserisci la tua età, per favore'));
+const kmDaPercorrere = Number(prompt('Inserisci il numero di km che vuoi percorrere, per favore'));
+const etaPasseggero = Number(prompt('Inserisci la tua età, per favore'));
 console.log(kmDaPercorrere, etaPasseggero);
 
 //calcolo prezzo biglietto per km da percorrere (senza sconti)
@@ -10,7 +10,7 @@ console.log('Il prezzo del biglietto - senza l\'applicazione di eventuali sconti
 
 //condizioni 
 let prezzoFinale;
-if (!isNaN(etaPasseggero) && !isNaN(kmDaPercorrere) && (etaPasseggero >= 0) && (kmDaPercorrere >= 1)){
+if (!isNaN(etaPasseggero) && !isNaN(kmDaPercorrere) && (etaPasseggero >= 0) && (kmDaPercorrere >= 1) && Number.isInteger(etaPasseggero)) {
     if ((etaPasseggero >= 18) && (etaPasseggero < 65)) {
         prezzoFinale = prezzoBiglietto;
         } else if (etaPasseggero < 18) {
