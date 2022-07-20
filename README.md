@@ -21,6 +21,7 @@
 
 - dichiara la variabile prezzoBiglietto 
 - inizializza la variabile prezzoBiglietto con il calcolo: prezzoAlKm * kmDaPercorrere;
+- Esci in console il prezzo al netto di eventuali sconti
 
 - Dichiaro condizioni per valutare prezzo finale: 
     - SE etaPasseggero >18 AND <65 
