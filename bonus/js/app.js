@@ -10,7 +10,7 @@ console.log('Il prezzo del biglietto - senza l\'applicazione di eventuali sconti
 
 //condizioni 
 let prezzoFinale;
-if (!isNaN(etaPasseggero) && !isNaN(kmDaPercorrere)){
+if (!isNaN(etaPasseggero) && !isNaN(kmDaPercorrere) && (etaPasseggero >= 0) && (kmDaPercorrere >= 1)){
     if ((etaPasseggero >= 18) && (etaPasseggero < 65)) {
         prezzoFinale = prezzoBiglietto;
         } else if (etaPasseggero < 18) {
