@@ -6,12 +6,14 @@ const prezzoAlKm = 0.21;
 const prezzoBiglietto = prezzoAlKm * kmDaPercorrere;
 console.log('Il prezzo del biglietto - al netto di sconti - è il seguente: ' + prezzoBiglietto + ' Є');
 
+let prezzoFinale;
+
 if ((etaPasseggero >= 18) && (etaPasseggero < 65)) {
-    console.log('Il prezzo del biglietto è il seguente: ' + prezzoBiglietto.toFixed(2) + ' Є');
+    prezzoFinale = prezzoBiglietto * 1;
 } else if (etaPasseggero < 18) {
-    const prezzoFinale = prezzoBiglietto * 0.8;
-    console.log('Il prezzo del biglietto è il seguente: ' + prezzoFinale.toFixed(2) + ' Є');
+    prezzoFinale = prezzoBiglietto * 0.8;
 } else {
-    const prezzoFinale = prezzoBiglietto * 0.6;
-    console.log('Il prezzo del biglietto è il seguente: ' + prezzoFinale.toFixed(2) + ' Є');
+    prezzoFinale = prezzoBiglietto * 0.6;
 }
+
+document.getElementById('messaggio').innerHTML = 'Il prezzo del biglietto è il seguente: ' + prezzoFinale.toFixed(2) + ' Є';
